@@ -1,0 +1,18 @@
+extend schema @link(url: "https://specs.apollo.dev/federation/v2.0", import: ["@key", "@shareable"])
+
+type Book @key(fields: "isbn") {
+  isbn: String!
+  title: String!
+  subtitle: String
+  author: String!
+  published: String
+  publisher: String
+  pages: Int
+  description: String
+  website: String
+}
+
+type Query {
+  books: [Book!]!
+  book(isbn: String!): Book
+}

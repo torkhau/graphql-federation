@@ -1,4 +1,5 @@
 packages:
   - 'services/*'
 allowBuilds:
+  '@apollo/protobufjs': true
   esbuild: true
